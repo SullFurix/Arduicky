@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "================================"
+echo "=          SullFurix           ="
+echo "================================"
+
+echo " ______________________________ "
+echo "(                              )"
+echo "( Recovering library...        )"
+echo "(______________________________)"
+sudo apt-get install dfu-programmer
+echo " ______________________________"
+echo "(                              )"
+read -p "( Root of the arduino software:  " rootArduino
+echo "(______________________________)"
+
+echo  "______________________________"
+echo "(                              )"
+echo "( Loading...                   )"
+echo "(                              )"
+cp ".\lib\HIDKeyboard.cpp" "%rootArduino%\hardware\arduino\avr\cores\arduino"
+cp ".\lib\HIDKeyboard.h" "%rootArduino%\hardware\arduino\avr\cores\arduino"
+echo "(                              )"
+echo "( End... Have Fun!!            )"
+echo "(______________________________)"
+
+pause

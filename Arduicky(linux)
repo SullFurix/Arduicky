@@ -1,0 +1,47 @@
+#!/bin/bash
+echo "=========================="
+echo "=       SullFurix        ="
+echo "=========================="
+
+echo " ________________________ "
+echo "(                        )"
+echo "( Reset the aurdino...   )"
+echo "(________________________)"
+
+read
+
+echo " ________________________ "
+echo "(                        )"
+echo "( Loading...             )______________________________"
+echo "(                                                       )"
+dfu-programmer atmega16u2 erase
+dfu-programmer atmega16u2 flash --debug 1 "lib\Arduino-usbserial-uno.hex"
+dfu-programmer atmega16u2 reset
+echo "(_______________________________________________________)"
+echo "(                        )"
+echo "( Plug cycle and program )"
+echo "(________________________)"
+
+read
+
+echo " ________________________ "
+echo "(                        )"
+echo "( Reset the aurdino...   )"
+echo "(________________________)"
+
+read
+
+echo " ________________________"
+echo "(                        )"
+echo "( Loading...             )______________________________"
+echo "(                                                       )"
+dfu-programmer atmega16u2 erase
+dfu-programmer atmega16u2 flash --debug 1 "lib\Arduino-keyboard-0.3.hex"
+dfu-programmer atmega16u2 reset
+echo "(_______________________________________________________)"
+echo "(                        )"
+echo "( End... Have Fun!!      )"
+echo "(________________________)"
+
+read
+
