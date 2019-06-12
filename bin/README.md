@@ -95,8 +95,8 @@ Build procedure for Windows
   You need to copy these files to your MinGW install directory
   if they are not already there:
 
-    windows/usb.h -> {path-to-mingw}/include/usb.h
-    windows/libusb.a -> {path-to-mingw}/lib/libusb.a
+   windows/usb.h -> {path-to-mingw}/include/usb.h
+   windows/libusb.a -> {path-to-mingw}/lib/libusb.a
 
   Open the MinGW shell window and change to the dfu-programmer folder.
   Note that C:\dir is accessed in MinGW using the path /c/dir
