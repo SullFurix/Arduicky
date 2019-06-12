@@ -2,11 +2,11 @@ Written by Chris Taylor for SparkFun Electronics, 10/15/12
 
 This is an Arduino library written to simpify the use of the Arduino UNO as an HID device. It can NOT be used on its own. It must be used in conjunction with the arduino-keyboard firmware written by Darran, found here:
 
-	http://hunt.net.nz/users/darran/weblog/b3029/Arduino_UNO_Keyboard_HID_version_03.html
+http://hunt.net.nz/users/darran/weblog/b3029/Arduino_UNO_Keyboard_HID_version_03.html
 
 This firmware is meant to be installed on the ATMega8U2 on the UNO. I would attempt to write full installation instructions in this README, but Michael did a much more thorough and colorful job here:
 
-	http://mitchtech.net/arduino-usb-hid-keyboard/
+http://mitchtech.net/arduino-usb-hid-keyboard/
 
 NOTE that the ATMega328 cannot be programmed over USB when the arduino-keyboard firmware is installed on the ATMega8U2, you must flash the arduino-serial firmware again using FLIP, as explained in the above link.
 
@@ -16,29 +16,29 @@ The library defines a series of functions that make sending HID codes intuitive.
 
 Each HID report is sent as a key plus a modifier. The modifiers are CTRL, ALT, SHIFT, and GUI. By default each key is sent with a modifier of zero. The modifiers can be masked together to send more complex commands. The function pressKey() is overloaded to do this. For example:
 
-	To send the keypress 'k', use
+To send the keypress 'k', use
 		
-		pressKey('k');
+	pressKey('k');
 	
-	To send the keypress CTRL+ALT+k, use
+To send the keypress CTRL+ALT+k, use
 
-		pressKey((CTRL | ALT), 'k');
+	pressKey((CTRL | ALT), 'k');
 
 There are similar functions for "Special Keys" like F1 that do not appear in the ASCII table. The values for these keys are defined in HIDKeyboard.h and are sent using the pressSpecialKey() function. For example:
 
-	To send the keypress TAB, use
+To send the keypress TAB, use
 		
-		pressSpecialKey(TAB);
+	pressSpecialKey(TAB);
 	
-	To send the keypress CTRL+ALT+TAB, use
+To send the keypress CTRL+ALT+TAB, use
 
-		pressSpecialKey((CTRL | ALT), TAB);
+	pressSpecialKey((CTRL | ALT), TAB);
 
 There are also functions for printing ASCII strings, similar to the Serial.print() and println() functions. All of the functions are listed below:
 
 	begin()
 		
-		Initializes the HIDKeyboard object by ending any Serial communication and resetting it to 9600 baud
+Initializes the HIDKeyboard object by ending any Serial communication and resetting it to 9600 baud
 
 	pressKey(modifier, key)
 	pressKey(key)
@@ -48,15 +48,15 @@ There are also functions for printing ASCII strings, similar to the Serial.print
 
 	releaseKey()
 
-		Releases any keys and modifiers that are currently down. NOTE: the pressKey and pressSpecialKey functions DO NOT release the key. releaseKey must be used to release the key. 
+Releases any keys and modifiers that are currently down. NOTE: the pressKey and pressSpecialKey functions DO NOT release the key. releaseKey must be used to release the key. 
 
 	print()
 	
-		Sends keypresses for a full string. For example print("Hello World!");
+Sends keypresses for a full string. For example print("Hello World!");
 
 	println()
 		
-		Sends keypresses for a full string, followed by a carriage return. 
+Sends keypresses for a full string, followed by a carriage return. 
 
 EXAMPLE:
 	
