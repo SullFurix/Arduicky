@@ -1,3 +1,4 @@
+### Dfu-programmer (https://github.com/dfu-programmer/dfu-programmer)
 dfu-programmer is an implementation of the Device Firmware Upgrade class
 USB driver that enables firmware upgrades for various USB enabled (with the
 correct bootloader) Atmel chips.  This program was created because the
