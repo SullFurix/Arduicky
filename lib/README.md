@@ -1,3 +1,5 @@
+### HIDKeyboard (https://github.com/SFE-Chris/UNO-HIDKeyboard-Library)
+
 Written by Chris Taylor for SparkFun Electronics, 10/15/12
 
 This is an Arduino library written to simpify the use of the Arduino UNO as an HID device. It can NOT be used on its own. It must be used in conjunction with the arduino-keyboard firmware written by Darran, found here:
@@ -84,3 +86,27 @@ OUTPUT:
 	aA
 
 For more examples, please see the included examples folder. 
+
+### Arduino-keyboard-0.3 (https://github.com/coopermaa/USBKeyboard)
+
+USBKeyboard is simple library for darran's Arduino UNO Keyboard HID.
+
+darran's Arduino UNO Keyboard HID:
+http://hunt.net.nz/users/darran/weblog/a6d52/Arduino_UNO_Keyboard_HID_version_02.html
+
+### Arduino-usbserial-uno (https://github.com/arduino/ArduinoCore-avr/tree/master/firmwares/atmegaxxu2/arduino-usbserial)
+
+To setup the project and upload the Arduino usbserial application firmware to an ATMEGA8U2 using the Arduino USB DFU bootloader:
+1. unpack the source into LUFA's Projects directory
+2. set ARDUINO_MODEL_PID in the makefile as appropriate
+3. do "make clean; make"
+4. put the 8U2 into USB DFU mode:
+4.a. assert and hold the 8U2's RESET line
+4.b. assert and hold the 8U2's HWB line
+4.c. release the 8U2's RESET line
+4.d. release the 8U2's HWB line
+5. confirm that the board enumerates as either "Arduino Uno DFU" or "Arduino Mega 2560 DFU"
+6. do "make dfu" (OS X or Linux - dfu-programmer must be installed first) or "make flip" (Windows - Flip must be installed first)
+
+Check that the board enumerates as either "Arduino Uno" or "Arduino Mega 2560".  Test by uploading a new Arduino sketch from the Arduino IDE.
+
