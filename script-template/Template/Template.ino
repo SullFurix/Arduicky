@@ -16,6 +16,6 @@ HIDKeyboard Keyboard;
     Keyboard.pressSpecialKey(ENTER); // Sends an "Enter" keypress
     Keyboard.releaseKey(); // Releases "Enter"
     delay(2000);
-    Keyboard.println("ciucoucocu"); // Types "Hello World!" followed by a carriage return
+    Keyboard.println("HelloWorld"); // Types "Hello World!" followed by a carriage return
     while(1); // Hold forever
   }
