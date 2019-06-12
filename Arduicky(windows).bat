@@ -1,3 +1,5 @@
+REM Windows files General Availability by SullFurix: 12/06/2019
+
 @echo off
 echo ==========================
 echo =       SullFurix        =
