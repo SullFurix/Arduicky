@@ -42,7 +42,10 @@ cd Arduicky
 
 ### Donate!
 Support the authors:
-### Paypal:
+### SullFurix:
 
-#### SullFurix:
+#### Paypal:
 https://paypal.me/spotifysullfurix
+
+#### bitcoin:
+12htWYFqGSZGUTm4RGJwUxwV5ezKGQmUtT
