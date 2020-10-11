@@ -40,12 +40,10 @@ cd Arduicky
 "Arduicky(windows)"
 ```
 
-### Donate!
-Support the authors:
-### SullFurix:
+### Credits:
 
-#### Paypal:
-https://paypal.me/spotifysullfurix
+#### SullFurix (@sullfurix): https://github.com/SullFurix
 
-#### bitcoin:
-12htWYFqGSZGUTm4RGJwUxwV5ezKGQmUtT
+### Donate:
+
+http://sullfurix.rf.gd/
